@@ -1,3 +1,7 @@
+<a href="#">
+    <img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-black.png" alt="ITESM" title="ITESM" align="right" height="60" />
+</a>
+
 # EQ8_TC1001S 🚀
 
 ## Propuesta de proyecto ⚙️
@@ -8,7 +12,7 @@ Como parte de nuestro proyecto, para identificar una buena propuesta, sé plante
 
 ## Autores ✒️
 Este proyecto es realizado para la Semana TEC "Herramientas computacionales: el arte de la programación (Gpo 120)" por :
-* Ian
+* Ian García - A01706892
 * Emiliano - A01707035
 * José Ángel Rico Mendieta - A01707404
 
