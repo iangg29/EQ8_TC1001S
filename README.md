@@ -9,5 +9,8 @@ Como parte de nuestro proyecto, para identificar una buena propuesta, sé plante
 ## Autores ✒️
 Este proyecto es realizado para la Semana TEC "Herramientas computacionales: el arte de la programación (Gpo 120)" por :
 * Ian
-* Emiliano
+* Emiliano - A01707035
 * José Ángel Rico Mendieta - A01707404
+
+## ¿Por qué? 🤔
+La razón por a cuál se utilizará el filtro *edge detection* es que nuestro equipo considera que este permite extraer información importante para la medición. Utilizando la detección de bordes es posible obtener las figuras o líneas que se tomarán en cuanta para medir, sin que sufran de algún efecto por los colores alrededor.
