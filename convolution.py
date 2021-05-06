@@ -1,11 +1,13 @@
 import numpy as np
 from add_padding import add_padding
 
-def convolution(matriz, kernel, padding):
+def convolution(matriz, kernel):
 	"""
 	Función para realizar la convolución de una matriz, con padding definido y stride de 1
+
+	Se agrega cierto padding pada mantener las mismas dimensiones de la imagen original
 	"""
-	matriz = add_padding(matriz, padding)
+	matriz = add_padding(matriz, kernel)
 	fil_m, col_m = matriz.shape
 	fil_k, col_k = kernel.shape
 	conv_final = np.zeros(((fil_m-fil_k)+1, (col_m-col_k)+1)) #Se declara matriz con dimensiones finales
