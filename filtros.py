@@ -14,14 +14,7 @@ def box_blur(imagen):
 					[1/9, 1/9, 1/9],
 					[1/9, 1/9, 1/9]])
 		
-	if len(imagen.shape) == 3: #Se cambia la imagen a escala de grises si es necesario
-		imagen = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
-
-	imagen_conv = convolution(imagen, kernel)
-
-	plt.imshow(imagen_conv, cmap='gray')
-	plt.title("Imagen con filtro aplicado")
-	plt.show()
+	ap_kernel(imagen, kernel)
 
 def laplacian_op(imagen):
 	"""
@@ -32,7 +25,16 @@ def laplacian_op(imagen):
 	kernel = np.array([[-1, -1, -1],
 					  [-1, 8, -1],
 					  [-1, -1, -1]])
+	ap_kernel(imagen, kernel)	
+	
+
+def repujado(imagen):
+	kernel = np.array([[-2, -1, 0],
+					  [-1, 1, 1],
+					  [0, 1, 2]])
+	ap_kernel(imagen, kernel)
 		
+def ap_kernel(imagen, kernel):
 	if len(imagen.shape) == 3: #Se cambia la imagen a escala de grises si es necesario
 		imagen = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
 
@@ -40,6 +42,6 @@ def laplacian_op(imagen):
 
 	plt.imshow(imagen_conv, cmap='gray')
 	plt.title("Imagen con filtro aplicado")
-	plt.show()
+	plt.show()	
 	
 
