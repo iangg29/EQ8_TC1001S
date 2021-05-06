@@ -9,10 +9,11 @@ def box_blur(imagen):
 
 	Se utiliza la función de convolución para aplicar el filtro y la librería matplotlib para mostrar la imagen
 	"""
-	kernel = np.array([[1/9, 1/9, 1/9],
-					  [1/9, 1/9, 1/9],
-					  [1/9, 1/9, 1/9]])
 	
+	kernel = np.array([[1/9, 1/9, 1/9],
+					[1/9, 1/9, 1/9],
+					[1/9, 1/9, 1/9]])
+		
 	if len(imagen.shape) == 3: #Se cambia la imagen a escala de grises si es necesario
 		imagen = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
 
@@ -21,7 +22,5 @@ def box_blur(imagen):
 	plt.imshow(imagen_conv, cmap='gray')
 	plt.title("Imagen con filtro aplicado")
 	plt.show()
-
-	return(imagen_conv)
 	
 
