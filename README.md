@@ -84,7 +84,7 @@ Este proyecto es realizado para la Semana TEC "Herramientas computacionales: el 
 
 ## Referencias
 Sinha, U. (s. f.). Convolutions: Image convolution examples - AI Shack. Recuperado 5 de mayo de 2021, de:  
-https://aishack.in/tutorials/image-convolution-examples/>
+https://aishack.in/tutorials/image-convolution-examples/
 
 Repositorio de apoyo:
-https://github.com/benjaminva/Sobel_Filter/tree/main>
+https://github.com/benjaminva/Sobel_Filter/tree/main
