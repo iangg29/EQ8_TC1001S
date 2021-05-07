@@ -1,8 +1,8 @@
 from tkinter import *
 from tkinter import messagebox
 
-from objetos.Imagen import Imagen
 from filtros import *
+from objetos.Imagen import Imagen
 
 
 class GUI:
@@ -29,9 +29,27 @@ class GUI:
         titulo.pack(side=LEFT)
         main = Frame(filters, height=40)
         main.pack(pady=30)
+        original = Button(main, font=("Arial", 14), text="Original", command=lambda: image.showOriginal(),
+                          justify=CENTER, padx=30, pady=4)
+        original.grid(row=1, column=1, pady=10)
         box = Button(main, font=("Arial", 14), text="Box blur", command=lambda: image.applyFilter(BoxBlur()),
                      justify=CENTER, padx=30, pady=4)
-        box.grid(row=1, column=1)
+        box.grid(row=2, column=1, pady=10)
+        laplacianop = Button(main, font=("Arial", 14), text="Laplacian Op",
+                             command=lambda: image.applyFilter(LaplacianOp()),
+                             justify=CENTER, padx=20, pady=4)
+        laplacianop.grid(row=3, column=1, pady=10)
+        repujado = Button(main, font=("Arial", 14), text="Repujado", command=lambda: image.applyFilter(Repujado()),
+                          justify=CENTER, padx=30, pady=4)
+        repujado.grid(row=4, column=1, pady=10)
+        laplacianogaussian = Button(main, font=("Arial", 14), text="Laplacian Of Gaussian",
+                                    command=lambda: image.applyFilter(LaplacianOfGaussian()),
+                                    justify=CENTER, padx=2, pady=4)
+        laplacianogaussian.grid(row=5, column=1, pady=10)
+        edge = Button(main, font=("Arial", 14), text="Edge detection",
+                      command=lambda: image.applyFilter(EdgeDetection()),
+                      justify=CENTER, padx=20, pady=4)
+        edge.grid(row=6, column=1, pady=10)
         bottom = Frame(filters)
         bottom.pack(side=BOTTOM)
         exitButton = Button(bottom, text="Regresar", fg="#556677", command=lambda: filters.destroy(), justify=CENTER,
