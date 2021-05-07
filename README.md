@@ -3,17 +3,17 @@
 </a>
 
 # EQ8_TC1001S 🚀
+Como parte del proyecto para la semana TEC "Herramientas computacionales: el arte de la programación (Gpo 120)", se hizo el presente programa para cumplir las siguientes competencias: 
 
-## Propuesta de proyecto ⚙️
-Como parte de nuestro proyecto, para identificar una buena propuesta, sé planteo la siguiente **aplicación**:
+* **SING0400  Compromiso con la sustentabilidad** 
 
-La detección de bordes es un proceso muy importante en la industria de la metrología ya que define los límites para la medición. La precisión en la detección del borde mejora la calidad en los procesos que se realicen.
+	_Aplica estándares internacionales y principios de sustentabilidad en la solución de problemas de la ingeniería y ciencias._
 
-### ¿Por qué? 🤔
-La razón por a cuál se utilizará el filtro *edge detection* es que nuestro equipo considera que este permite extraer información importante para la medición. Utilizando la detección de bordes es posible obtener las figuras o líneas que se tomarán en cuanta para medir, sin que sufran de algún efecto por los colores alrededor.
+* **SING0401 Aplicación de estándares y normas** 
 
-Imagen de Kernel 3x3
-![](https://aishack.in/static/img/tut/conv-edge-detection.jpg)
+	_Aplica los estándares y normas en el ejercicio de su profesión manteniéndolos como referencia a seguir en la solución de problemas de ingeniería y ciencias._
+
+El programa cumple la función de aplicar diferentes filtros a una imagen especificada con su nombre, pudiendo tener varias aplicaciones en áreas transversales a la nuestra. Siguiendo con los estándares establecidos y con un control de versiones bien aplicado. 
 
 ## Uso del proyecto
 
@@ -33,10 +33,6 @@ Le proyecto está programado en el lenguaje python, este puede ser descargado de
 	```sh
 	pip install matplotlib
 	```
-* Argparse
-	```sh
-	pip install argparse
-	```
 * Tkinter (normalmente se insatla automáticamente con Python)
 	```sh
 	pip install tk
@@ -55,12 +51,29 @@ Posteriormente, para correr el script se debe ingresar el siguiente comando en l
 ```
 
 Al correr el programa, se desplegará una ventana similar a la siguiente:
-**Aqui va una imagen**
 
-En la casilla se debe ingresar el nombre de la imagen que se desee utilizar para aplicar los diferentes filtros. Utilizando la imagen incluida de prueba, esto se vería de la siguiente manera:
-**Aquí va otra imagen**
+<p align="center">
+  <img src="Imagenes/GUI_Casilla.jpg" />
+</p>
+
+En la casilla se debe ingresar el nombre de la imagen que se desee utilizar para aplicar los diferentes filtros(_**Nota:** la imagen debe estar en la misma carpeta que el archivo main_root.py_). Utilizando la imagen incluida de prueba, esto se vería de la siguiente manera:
+
+<p align="center">
+  <img src="Imagenes/GUI_Prueba.jpg" />
+</p>
+
+Posteriormente se debe hacer clic en el boton **Procesar**, lo cuál desplegará una nueva ventana si la entrada en la casilla es válida:
+
+<p align="center">
+  <img src="Imagenes/GUI_Filtros.jpg" />
+</p>
 
 Finalmente, solo es necesario hacer clic sobre el botón que se desee para aplicar dicho filtro sobre la imagen (transformada a escala de grises si es necesario), esto generará una ventana emergente con la imagen nueva.
+
+<p align="center">
+  <img src="Imagenes/GUI_Final.jpg" />
+</p>
+
 
 ## Autores ✒️
 
@@ -70,4 +83,8 @@ Este proyecto es realizado para la Semana TEC "Herramientas computacionales: el 
 * José Ángel Rico Mendieta - A01707404
 
 ## Referencias
+Sinha, U. (s. f.). Convolutions: Image convolution examples - AI Shack. Recuperado 5 de mayo de 2021, de:  
+https://aishack.in/tutorials/image-convolution-examples/
 
+Repositorio de apoyo:
+https://github.com/benjaminva/Sobel_Filter/tree/main
