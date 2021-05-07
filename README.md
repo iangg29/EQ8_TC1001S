@@ -55,12 +55,29 @@ Posteriormente, para correr el script se debe ingresar el siguiente comando en l
 ```
 
 Al correr el programa, se desplegará una ventana similar a la siguiente:
-**Aqui va una imagen**
+
+<p align="center">
+  <img src="Imagenes/GUI_Casilla.jpg" />
+</p>
 
 En la casilla se debe ingresar el nombre de la imagen que se desee utilizar para aplicar los diferentes filtros. Utilizando la imagen incluida de prueba, esto se vería de la siguiente manera:
-**Aquí va otra imagen**
+
+<p align="center">
+  <img src="Imagenes/GUI_Prueba.jpg" />
+</p>
+
+Posteriormente se debe hacer clic en el boton **Procesar**, lo cuál desplegará una nueva ventana si la entrada en la casilla es válida:
+
+<p align="center">
+  <img src="Imagenes/GUI_Filtros.jpg" />
+</p>
 
 Finalmente, solo es necesario hacer clic sobre el botón que se desee para aplicar dicho filtro sobre la imagen (transformada a escala de grises si es necesario), esto generará una ventana emergente con la imagen nueva.
+
+<p align="center">
+  <img src="Imagenes/GUI_Final.jpg" />
+</p>
+
 
 ## Autores ✒️
 
