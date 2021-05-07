@@ -38,9 +38,11 @@ class Imagen:
         :param filter: Filtro a aplicar.
         """
         filtered = self.convolution(self.getImage(), filter.getKernel())
-        plt.show(filtered, cmap="gray")
+
+        plt.imshow(filtered, cmap='gray')
         plt.title(f"Imagen con filtro [{filter.getNombre()}]")
         plt.show()
+        return filtered
 
     def convolution(self, matrix, kernel):
         """

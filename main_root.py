@@ -1,5 +1,7 @@
 import tkinter as tk
 
+from GUI import GUI
+
 
 def launchApp():
     ventana = tk.Tk()  # Contenedor gráfico
@@ -41,4 +43,4 @@ def launchApp():
 
 
 if __name__ == '__main__':
-    launchApp()
+    GUI("Filtro Tumblr").start()
