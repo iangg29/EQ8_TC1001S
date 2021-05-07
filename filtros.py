@@ -1,47 +1,40 @@
 import numpy as np
-import matplotlib.pyplot as plt
-import cv2
-from convolution import convolution
 
-def box_blur(imagen):
-	"""
-	Función para aplicar el filtro de box blur a una imagen y desplegarla
+from objetos.Filtro import Filtro
 
-	Se utiliza la función de convolución para aplicar el filtro y la librería matplotlib para mostrar la imagen
-	"""
-	
-	kernel = np.array([[1/9, 1/9, 1/9],
-					[1/9, 1/9, 1/9],
-					[1/9, 1/9, 1/9]])
-		
-	ap_kernel(imagen, kernel)
 
-def laplacian_op(imagen):
-	"""
-	Función para aplicar el operador laplaciano a una imagen y desplegarla
+class BoxBlur(Filtro):
+    def __init__(self):
+        super(BoxBlur, self).__init__("Box Blur", np.array([[1 / 9, 1 / 9, 1 / 9],
+                                                            [1 / 9, 1 / 9, 1 / 9],
+                                                            [1 / 9, 1 / 9, 1 / 9]]))
 
-	Se utiliza la función de convolución para aplicar el filtro y la librería matplotlib para mostrar la imagen
-	"""
-	kernel = np.array([[-1, -1, -1],
-					  [-1, 8, -1],
-					  [-1, -1, -1]])
-	ap_kernel(imagen, kernel)	
-	
 
-def repujado(imagen):
-	kernel = np.array([[-2, -1, 0],
-					  [-1, 1, 1],
-					  [0, 1, 2]])
-	ap_kernel(imagen, kernel)
-		
-def ap_kernel(imagen, kernel):
-	if len(imagen.shape) == 3: #Se cambia la imagen a escala de grises si es necesario
-		imagen = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
+class LaplacianOp(Filtro):
+    def __init__(self):
+        super(LaplacianOp, self).__init__("Laplacian Op", np.array([[-1, -1, -1],
+                                                                    [-1, 8, -1],
+                                                                    [-1, -1, -1]]))
 
-	imagen_conv = convolution(imagen, kernel)
 
-	plt.imshow(imagen_conv, cmap='gray')
-	plt.title("Imagen con filtro aplicado")
-	plt.show()	
-	
+class Repujado(Filtro):
+    def __init__(self):
+        super(Repujado, self).__init__("Repujado", np.array([[-2, -1, 0],
+                                                             [-1, 1, 1],
+                                                             [0, 1, 2]]))
 
+
+class LaplacianOfGaussian(Filtro):
+    def __init__(self):
+        super(LaplacianOfGaussian, self).__init__("Laplacian of Gaussian", np.array([[0, 0, -1, 0, 0],
+                                                                                     [0, -1, -2, -1, 0],
+                                                                                     [-1, -2, 16, -2, -1],
+                                                                                     [0, -1, -2, -1, 0],
+                                                                                     [0, 0, -1, 0, 0]]))
+
+
+class EdgeDetection(Filtro):
+    def __init__(self):
+        super(EdgeDetection, self).__init__("Edge Detection", np.array([[-1, -1, -1],
+                                                                        [-1, 8, -1],
+                                                                        [-1, -1, -1]]))
